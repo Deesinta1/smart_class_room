@@ -470,7 +470,7 @@ class ApiService {
     try {
       final headers = await _getAuthHeaders();
       final response = await http.post(
-        Uri.parse('$baseUrl/assignments/$assignmentId/submit/'),
+        Uri.parse('$baseUrl/api/assignments/$assignmentId/submit/'),
         headers: headers,
         body: jsonEncode({'answer': answer}),
       );
@@ -519,7 +519,7 @@ class ApiService {
     try {
       final headers = await _getAuthHeaders();
       final response = await http.get(
-        Uri.parse('$baseUrl/assignments/$assignmentId/submissions/'),
+        Uri.parse('$baseUrl/api/assignments/$assignmentId/submissions/'),
         headers: headers,
       );
 
